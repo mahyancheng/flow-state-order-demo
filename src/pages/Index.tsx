@@ -1,13 +1,42 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+
+import { OrderProvider } from '@/contexts/OrderContext';
+import Header from '@/components/Header';
+import DemoHeader from '@/components/DemoHeader';
+import OrderProcessingSection from '@/components/OrderProcessingSection';
+import InventorySection from '@/components/InventorySection';
+import FulfillmentSection from '@/components/FulfillmentSection';
+import CustomerSection from '@/components/CustomerSection';
+import AnalyticsSection from '@/components/AnalyticsSection';
+import CustomizationSection from '@/components/CustomizationSection';
 
 const Index = () => {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
-        <p className="text-xl text-gray-600">Start building your amazing project here!</p>
+    <OrderProvider>
+      <div className="min-h-screen bg-gray-50">
+        <Header />
+        
+        <main>
+          <DemoHeader />
+          <div className="container mx-auto px-4">
+            <OrderProcessingSection />
+            <InventorySection />
+            <FulfillmentSection />
+            <CustomerSection />
+            <AnalyticsSection />
+            <CustomizationSection />
+          </div>
+        </main>
+        
+        <footer className="bg-gray-800 text-white py-8 mt-16">
+          <div className="container mx-auto px-4 text-center">
+            <p>&copy; 2025 Custom Software Solutions. All rights reserved.</p>
+            <p className="text-gray-400 mt-2 text-sm">
+              This interactive demo is for illustration purposes only.
+            </p>
+          </div>
+        </footer>
       </div>
-    </div>
+    </OrderProvider>
   );
 };
 
