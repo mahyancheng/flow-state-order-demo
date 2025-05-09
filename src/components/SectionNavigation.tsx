@@ -20,7 +20,7 @@ const SectionNavigation: React.FC<SectionNavigationProps> = ({ sectionId, target
   };
 
   return (
-    <div className="scroll-prompt" onClick={() => scrollToSection(targetSectionId)}>
+    <div className="scroll-prompt mt-12 mb-6" onClick={() => scrollToSection(targetSectionId)}>
       <p className="text-brand-700 font-medium mb-2">{title}</p>
       <div className="scroll-arrow text-brand-500">
         <ChevronDown size={24} />

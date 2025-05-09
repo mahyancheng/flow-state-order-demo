@@ -18,12 +18,14 @@ const Index = () => {
         <main>
           <DemoHeader />
           <div className="container mx-auto px-4">
-            <OrderProcessingSection />
-            <InventorySection />
-            <FulfillmentSection />
-            <CustomerSection />
-            <AnalyticsSection />
-            <CustomizationSection />
+            <div className="max-w-6xl mx-auto">
+              <OrderProcessingSection />
+              <InventorySection />
+              <FulfillmentSection />
+              <CustomerSection />
+              <AnalyticsSection />
+              <CustomizationSection />
+            </div>
           </div>
         </main>
         
